@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jolie 19th</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+<div class="container">
+
+    <h1>Happy Birthday babe </h1>
+    <h2>I love you <span class="heart">♥</span></h2>
+<div class="video-container">
+    <div class = "video"><video src="05259.mp4"></video></div>
+    
+    <div class = "video"><video src="05249.mp4"></video></div>
+    
+</div>
+
+<div class="popup-video">
+    <span>&times;</span>
+    <video src="IMG_0061 copy.mp4" autoplay controls></video>
+</div>
+
+</div>
+
+<script>
+    document.querySelectorAll('.video-container video').forEach(vid =>{
+        vid.onclick = () => {
+            document.querySelector('.popup-video').style.display = 'block';
+            document.querySelector('.popup-video video').src = vid.getAttribute('src');
+        }
+    });
+
+    document.querySelector('.popup-video span').onclick = () =>{
+        document.querySelector('.popup-video').style.display = 'none';
+        document.querySelector('.popup-video video').pause();
+    }
+</script>
+</body>
+</html>
